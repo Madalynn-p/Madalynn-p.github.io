@@ -9,31 +9,51 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="css/lib/bootstrap.min.css"rel="stylesheet"
 </head>
-<body class="bg-dark">
-    <div class="d-flex justify-content-center align-items-center">
-         <div class="card-body col-lg-5">
-                <div class="justify-content-center">
-                    <i class="bi bi-geo-alt"></i>
-                    <label class="form-control" id="txtlocation">Location</label>
+<body class="bg-dark d-flex align-items-center vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-6 col-lg-5">
+                
+                <div class="card ">
+                    <div class="card-body text-center mt-4">
+                        
+                        <h2 class="mb-4">
+                            <i class="bi bi-geo-alt"></i> Cookeville, TN
+                        </h2>
+
+                        <div class="mb-3">
+                            <i id="txtConditionIcon" class="bi bi-cloud-fill text-primary"></i>
+                        </div>
+
+                        <div class=" mb-2">
+                            <i class="bi bi-thermometer-half text-danger"></i>
+                            <span id="txtTemperature">--</span>°F
+                        </div>
+
+                        <p id="txtWeatherConditions">Curent Weather Conditions</p>
+
+                        <div class="row  border-top pt-4">
+                            <div class="col-12">
+                                <p class="fs-5">
+                                    <i class="bi bi-droplet-fill text-info"></i> 
+                                    Humidity: <span id="txtHumidity">--</span>%
+                                </p>
+                            </div>
+                        </div>
+
+   
+                        <footer class="mt-2 justify-content-center text-center">
+                            Data provided by <a href="https://open-meteo.com/"> open-meteo.com</a>
+                        </footer>
+                    </div>
                 </div>
-            <i class="bi bi-cloud-drizzle-fill"></i>
-            <i class="bi bi-cloud-lightning-rain-fill"></i>
-            <i class="bi bi-cloud-fill"></i>
-            <i class="bi bi-percent"></i>
-         </div>
-
+             </div>
+        </div>
     </div>
-
-    <footer class="mt-2 justify-content-center text-center">
-        Data provided by <a href="https://open-meteo.com/"> open-meteo.com</a>
-        
-
-
-    </footer>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <scrip src="js/app.js"></scrip>
+    <scrip src="js/app.js"></script>
 
 </body>
 </html>
