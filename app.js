@@ -1,7 +1,7 @@
 
 const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=36.1628&longitude=-85.5016&daily=temperature_2m_max,weather_code,apparent_temperature_max,temperature_2m_min,apparent_temperature_min,rain_sum&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,weather_code&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,precipitation&timezone=America%2FChicago&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch";
 /*
-    https://Madalynn-p.github.io/v1/forecast?latitude=36.1628&longitude=-85.5016&daily=temperature_2m_max,weather_code,apparent_temperature_max,temperature_2m_min,apparent_temperature_min,rain_sum&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,weather_code&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,precipitation&timezone=America%2FChicago&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch
+  https://Madalynn-p.github.io/v1/forecast?latitude=36.1628&longitude=-85.5016&daily=temperature_2m_max,weather_code,apparent_temperature_max,temperature_2m_min,apparent_temperature_min,rain_sum&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,weather_code&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,precipitation&timezone=America%2FChicago&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch
 */
 
 function getWeatherData(){
