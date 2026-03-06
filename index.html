@@ -4,46 +4,55 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
             <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
             <link rel="mainfest" href="mainfest.json" />
-            <link rel="mainfest" href="app.webmanifest" crossorigin="use-credentials" />
+            <link rel="mainfest" href="/app.webmanifest" crossorigin="use-credentials" />
             <meta name="mobile-web-app-capable" content="yes">
             <meta name="apple-mobile-web-app-capable" content="yes">  
             <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
             <title>Weather Application</title>  
             <link rel="icon" type="image/x-icon" href="logo.png"> 
-            <link rel="apple-touch-icon" href="logo.png"> 
-            <link rel="apple-touch-icon" sizes="60x60" href="icon-60X60.png"> 
-            <link rel="apple-touch-icon" sizes="114x114" href="icon-114x144.png"> 
-            <link rel="apple-touch-icon" sizes="144x144" href="logo.png"> 
+    <link rel="apple-touch-icon" href="logo.png"> 
+    <link rel="apple-touch-icon" sizes="60x60" href="icon-60X60.png"> 
+    <link rel="apple-touch-icon" sizes="114x114" href="icon-114x144.png"> 
+    <link rel="apple-touch-icon" sizes="144x144" href="logo.png"> 
             <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body style="background-color: rgb(128, 145, 165);" class="d-flex align-items-center min-vh-100">
-    <div class="container"> <!--This should fit all container sizes-->
+    <div class="container"> 
         <div class="row justify-content-center">
-            <div class="card col-11 col-md-8 ">
+            <div class="card col-sm-11 col-md-8 col-lg-7">
                 <div class="card text-bg-dark">
-                    <img src="cloud.png" class="card-img" alt="A picture of the clouds">
-            <div class="card-img-overlay mt-5 text-center">
-                <h1 class="card-title text-primary">Weather</h1>
-            </div>
-            </div>
-            <div class="card-body text-center mt-3">
-                <h2 class="mb-4 fs-2">
-                    <i class="bi bi-geo-alt text-danger"></i> Cookeville, TN
+                    <img src="cloud.png" class="card-img" alt="A picture of the clouds">   <!--Yes I did add a pic of the clouds-->
+                    <div class="card-img-overlay mt-5 text-center">
+                        <h1 class="card-title text-primary">Weather</h1>
+                    </div>
+                 </div>
+            <div class="card-body text-center mt-3 border">
+                <h2 class="mb-4 fs-2 border border-danger">  <!--Made a boarders so it breaks the top from the rest-->
+                    <i class="bi bi-geo-alt text-danger"></i> <label class="text-danger">Cookeville, TN</label>
                 </h2>
                 <div class="mb-3 fs-2">
                     <i id="txtconditionIcon" class="bi bi-cloud-fill text-primary"></i>
                     <p id="txtWeatherConditions">Curent Weather Conditions</p>
                 </div>
-                <div class="hstack gap-3 justify-content-center">
-                    <div class=" mb-2 fs-2">
+                <div class=" mb-3 fs-2 border border-primary-subtle">  <!--add a boarder so it is seperated from the rest as this is apparent temp -->
+                        <lable class="text-primary-emphasis">Feels Like:</lable> <label id="txtApparentTemp" class="text-primary-emphasis">--</label>
+                </div>
+                <div class="hstack gap-5 justify-content-center">
+                    <div class=" mb-2 fs-2"> <!--Current Temp-->
                             <i id="txtTempIcon" class="bi bi-thermometer-half text-danger"></i>
                             <label  id="txtTemp">--</label>
                     </div>
-                    <div class="mb-2 fs-2">
+                    <div class="mb-2 fs-2"> <!--Humity-->
                         <i class="bi bi-droplet-fill text-info"></i> 
                         Humity: <label id="txtHumity">--</label>%
                     </div>
+                </div>
+                <div class="mb-2 fs-2"> <!--Added a High and Low -->
+                    H: <label id="txtTempHigh">--</label> 
+                    L: <label id="txtTempLow">--</label>
+
                 </div>
             
     
@@ -58,8 +67,9 @@
     </div>
     
 </body>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 </html>
