@@ -29,47 +29,47 @@ function getWeatherData(){
             document.querySelector('#txtTempLow').innerHTML = Math.round(daily.temperature_2m_min [0])// I am going to assume the 0 is the current days H and L
             document.querySelector('#txtHumity').innerHTML = current.relative_humidity_2m
            // Weather Code Logic
-            let weatherCode = current.weather_code;
-            let Temperature = current.temperature_2m
-            let iconElement = document.querySelector('#txtconditionIcon')
-            let textElement = document.querySelector('#txtWeatherConditions')
-            let iconTemp = document.querySelector('#txtTempIcon')
+            let strweatherCode = current.weather_code;
+            let strTemperature = current.temperature_2m
+            let strIconWeather = document.querySelector('#txtconditionIcon')
+            let strTextWeather = document.querySelector('#txtWeatherConditions')
+            let strIconTemp = document.querySelector('#txtTempIcon')
            
          //Temperture icon
-            if(Temperature >= 0 && Temperature <=31  ){
-                iconTemp.className = 'bi bi-thermometer text-primary-emphasis'
-            }else if(Temperature >=32 && Temperature <= 60) {
-                iconTemp.className = 'bi bi-thermometer-low text-primary'
-            }else if(Temperature >=61 && Temperature <=80){
-                iconTemp.className = 'bi bi-thermometer-half text-warning'
+            if(strTemperature >= 0 && strTemperature <=31  ){
+                strIconTemp.className = 'bi bi-thermometer text-primary-emphasis'
+            }else if(strTemperature >=32 && strTemperature <= 60) {
+               strIconTemp.className = 'bi bi-thermometer-low text-primary'
+            }else if(strTemperature >=61 && strTemperature <=80){
+                strIconTemp.className = 'bi bi-thermometer-half text-warning'
             }else {
-                iconTemp.className = 'bi bi-thermometer-high text-danger'
+                strIconTemp.className = 'bi bi-thermometer-high text-danger'
             }
             // WMO Weather interpretation codes (https://open-meteo.com/en/docs)
             //Weather code icons 
-            if (weatherCode === 0) {
-                iconElement.className = 'bi bi-brightness-high-fill text-warning'
-                textElement.innerHTML = 'Clear Skies'
+            if (strweatherCode === 0) {
+                strIconWeather.className = 'bi bi-brightness-high-fill text-warning'
+                strTextWeather.innerHTML = 'Clear Skies'
             } 
-            else if (weatherCode >= 1 && weatherCode <= 3) {
-                iconElement.className = 'bi bi-cloud-sun-fill text-secondary'
-                textElement.innerHTML = 'Partly Cloudy'
+            else if (strweatherCode >= 1 && strweatherCode <= 3) {
+                strIconWeather.className = 'bi bi-cloud-sun-fill text-secondary'
+                strTextWeather.innerHTML = 'Partly Cloudy'
             } 
-            else if (weatherCode >= 45 && weatherCode <= 48) {
-                iconElement.className = 'bi bi-cloud-fog2-fill text-light'
-                textElement.innerHTML = 'Foggy'
+            else if (strweatherCode >= 45 && strweatherCode <= 48) {
+                strIconWeather.className = 'bi bi-cloud-fog2-fill text-light'
+                strTextWeather.innerHTML = 'Foggy'
             }
-            else if (weatherCode >= 51 && weatherCode <= 67) {
-                iconElement.className = 'bi bi-cloud-rain-heavy-fill text-info'
-                textElement.innerHTML = 'Rainy'
+            else if (strweatherCode >= 51 && strweatherCode <= 67) {
+                strIconWeather.className = 'bi bi-cloud-rain-heavy-fill text-info'
+                strTextWeather.innerHTML = 'Rainy'
             } 
-            else if (weatherCode >= 71 && weatherCode <= 77) {
-                iconElement.className = 'bi bi-snow2 text-white'
-                textElement.innerHTML = 'Snowing'
+            else if (strweatherCode >= 71 && strweatherCode <= 77) {
+                strIconWeather.className = 'bi bi-snow2 text-white'
+                strTextWeather.innerHTML = 'Snowing'
             }
             else {
-                iconElement.className = 'bi bi-cloud-fill text-primary'
-                textElement.innerHTML = 'Cloudy'
+                strIconWeather.className = 'bi bi-cloud-fill text-primary'
+                strTextWeather.innerHTML = 'Cloudy'
             }
 
         })
